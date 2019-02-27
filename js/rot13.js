@@ -6,13 +6,14 @@ function rot13(text){
 
   for (var i = 0; i < text.length; i++) {
     position_current = text.charCodeAt(i);                                      //in Variable "position_current" wird der Unicode-Wert des aktuellen Zeichens gespeichert
+    console.log(position_current);
     position_shifted = text.charCodeAt(i) + key;                                //in Variable "position_shifted" wird der Unicode-Wert des Zeichens nach Verschiebung mit dem Schlüssel gespeichert
 
     if (position_shifted > 90 && position_shifted < 104){                       //sollte es sich um ein verschobenes Zeichen mit einem Unicode Wert im Bereich von 90-104 (Großbuchstabe) handeln
       resolution.push(String.fromCharCode(96+position_current-122+13));         //beginnt die restliche Zählung wieder bei dem Großbuchstaben A und das zugehörige Zeichen des Unicode-Wertes wird zum String und dem Array "resolution" hinzugefügt
     }
-    else if ((position_current >= 0 && position_current <= 64) || (position_current >= 123 && position_current <= 126)) { //sollten sich die Zeichen im Bereich von 0-64 oder 123-126 (Sonderzeichen) befinden
-      resolution.push(String.fromCharCode(position_current));                                                             //werden diese nicht verschoben
+    else if ((position_current >= 0 && position_current <= 64) || (position_current >= 123 && position_current <= 126 || (position_current >= 127))) { //sollten sich die Zeichen im Bereich von 0-64, 123-126 oder im Bereich von 127 und größer (Sonderzeichen) befinden
+      resolution.push(String.fromCharCode(position_current));                                                                                          //werden diese nicht verschoben
     }
     else if (position_shifted > 122){                                           //sollte es sich um ein verschobenes Zeichen mit dem Unicode Wert größer als 122 handeln
       resolution.push(String.fromCharCode(96+position_current-122+13));         //beginnt die restliche Zählung wieder bei dem Kleinbuchstaben a und das zugehörige Zeichen des Unicode-Wertes wird zum String und dem Array "resolution" hinzugefügt
