@@ -1,11 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Arial";
 }
 
 html {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 header {
@@ -19,6 +21,10 @@ header h1 {
   text-align: center;
   line-height: 100px;
   color: rgb(255, 255, 255);
+}
+
+select::-ms-expand{
+    display: none;
 }
 
 footer {
@@ -36,8 +42,9 @@ footer p {
 
 .container {
   width: 80%;
-  height: 50%;;
+  height: 50%;
   margin: 10%;
+  margin-top: 100px;
 }
 
 .menu {
@@ -52,26 +59,83 @@ footer p {
   display: table-cell;
 }
 
-#i1, #i3 {
+#i1, #i2 {
   position: relative;
   display: table-cell;
-  width: 46%;
+  width: 50%;
 }
 
-#i2 {
-  width: 8%;
+.selection-box {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+}
+
+.selection-box::after{
+    content: "";
+    display: inline-block;
+    border-top: 10px solid #777;
+    border-right:10px solid transparent;
+    border-left:10px solid transparent;
+    position: absolute;
+    top:calc(50% - 5px);
+    right:.5rem;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .selection {
   position: relative;
   width: 100%;
-  height: 50px;
+  height: 100%;
   text-align: center;
+  border: 1px solid #777;
+  border-radius: 3px;
+  cursor: pointer;
+  background: transparent;
+  font-size: 15px;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.selection:focus {
+  outline: none;
 }
 
 .btn {
   width: 100%;
-  height: 50px;
+  height: 25px;
+  border: 2px solid #ccc;
+  background: transparent;
+  transition: color 0.3s linear;
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  z-index: -1;
+  transition: transform 1.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+  transform: scaleX(0);
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
 }
 
 .content {
@@ -88,8 +152,33 @@ footer p {
   height: 100%;
 }
 
+.keybox {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
 .textbox {
   width: 100%;
   height: 100%;
   resize: none;
+  outline: none;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.textbox:focus {
+  outline: none !important;
+  box-shadow:none !important;
 }
