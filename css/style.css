@@ -113,6 +113,7 @@ footer p {
   position: relative;
   font-size: 15px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .btn:hover {
