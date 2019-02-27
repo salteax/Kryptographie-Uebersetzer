@@ -15,13 +15,12 @@ function vigenere(decrypt, key, text) {
 function substituteCharacter(decrypt, keyChar, textChar) {
     var keyIndex = charToABCIndex(keyChar);
     if (decrypt) {
-        // create the opposite of the encryption key index
         keyIndex = ALPHABET_SIZE - keyIndex;
     }
 
     var textIndex = charToABCIndex(textChar);
 
-    // the actual Vigenere substitution, the rest is just indexing and conversion
+
     var substitutedIndex = (textIndex + keyIndex) % ALPHABET_SIZE;
 
     var substitutedChar = abcIndexToChar(substitutedIndex);
