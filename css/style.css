@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background: rgb(50, 95, 160);
+  border-bottom: 10px solid rgb(16, 50, 126);
+}
+
+header h1 {
+  text-align: center;
+  line-height: 100px;
+  color: rgb(255, 255, 255);
+}
+
+footer {
+  position:fixed;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background:#999;
+}
+
+footer p {
+  text-align: center;
+  line-height: 30px;
+}
+
+.container {
+  width: 80%;
+  height: 50%;;
+  margin: 10%;
+}
+
+.menu {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: table;
+}
+
+.item {
+  position: relative;
+  display: table-cell;
+}
+
+#i1, #i3 {
+  position: relative;
+  display: table-cell;
+  width: 46%;
+}
+
+#i2 {
+  width: 8%;
+}
+
+.selection {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: table;
+}
+
+.box {
+  position: relative;
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+}
+
+.textbox {
+  width: 100%;
+  height: 100%;
+  resize: none;
+}

@@ -3,11 +3,65 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kryptographie-&Uuml;bersetzer</title>
+
+  <meta name="author" content="Paul Koreng">
+  <meta name="publisher" content="Paul Koreng">
+  <meta name="copyright" content="Paul Koreng">
+
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+  <script type="text/javascript" src="./js/select.js"></script>
+  <script type="text/javascript" src="./js/timer.js"></script>
+
+  <script type="text/javascript" src="./js/rot13.js"></script>
+  <script type="text/javascript" src="./js/vigenere.js"></script>
 </head>
 
 <body>
+  <header>
+    <h1>Kryptographie-&Uuml;bersetzer</h1>
+  </header>
 
+  <main>
+    <div class="container">
+      <div class="menu">
+        <div class="item" id="i1">
+          <select class="selection">
+            <option>Klartext</option>
+            <option>ROT13</option>
+            <option>Vigenère-Chiffre</option>
+          </select>
+        </div>
+        <div class="item" id="i2">
+          <button class="btn" onclick="">&rightarrow;</button>
+        </div>
+        <div class="item" id="i3">
+          <select class="selection">
+            <option>Klartext</option>
+            <option>ROT13</option>
+            <option>Vigenère-Chiffre</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="box">
+          <textarea class="textbox" id="left"></textarea>
+        </div>
+
+        <div class="box">
+          <textarea class="textbox" id="right"></textarea>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2019 Paul Koreng</p>
+  </footer>
 </body>
 
 </html>
