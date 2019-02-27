@@ -22,9 +22,7 @@ function rot13(text){
     else {                                                                      //sollte es sich um kein Buchstaben aus dem Alphabet handeln (sondern ein Sonderzeichen/Umlaut/etc.)
       resolution.push(String.fromCharCode(position_current));                   //dann behält das Zeichen sein Wert und bleibt somit gleich (wird nicht verschoben)
     }
-
   }
-
   return resolution.join('');                                                   //der Array "resolution" wird zum String zusammengefasst und zurückgegeben
 }
 //Timer einbauen
