@@ -33,34 +33,33 @@
           <div class="selection-box">
             <select class="selection" id="sel1">
               <option value="0">Klartext</option>
-              <option value="1">ROT13</option>
-              <option value="2">Vigenère-Chiffre</option>
+              <option value="1">Geheimtext</option>
             </select>
           </div>
         </div>
         <div class="item" id="i2">
           <div class="selection-box">
             <select class="selection" id="sel2">
-              <option value="0">Klartext</option>
-              <option value="1">ROT13</option>
-              <option value="2">Vigenère-Chiffre</option>
+              <option value="0">ROT13</option>
+              <option value="1">Vigenère-Chiffre</option>
             </select>
           </div>
         </div>
       </div>
 
-      <button class="btn" onclick="submit(document.getElementById('sel1').value,document.getElementById('sel2').value,document.translator.input.value,document.keyform.key.value)">&uuml;bersetzen</button>
+      <button class="btn" onclick="submit(document.getElementById('sel1').value,document.getElementById('sel2').value,document.textform.input.value,document.keyform.key.value)">
+        &uuml;bersetzen
+      </button>
 
       <form name="keyform">
         <textarea class="keybox" name="key" placeholder="Schlüssel eingeben..." value=""></textarea>
       </form>
 
-      <form name="translator">
+      <form name="textform">
         <div class="content">
           <div class="box">
             <textarea class="textbox" id="left" name="input" placeholder="Text eingeben..."></textarea>
           </div>
-
           <div class="box">
             <textarea class="textbox" id="right" name="output"></textarea>
           </div>
