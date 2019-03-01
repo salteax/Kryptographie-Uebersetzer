@@ -9,7 +9,7 @@ function submit(val1, val2, text, key){
         key = "vigenere";
         document.keyform.key.value = key;
       }
-      if (val1 == 1) {
+      if (val1 == 0) {
         document.textform.output.value = vigenere(false,key,text);
       } else {
         document.textform.output.value = vigenere(true,key,text);
