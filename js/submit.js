@@ -2,9 +2,16 @@ function submit(val1, val2, text, key){
 
   switch (val2) {
     case '0':
-      document.textform.output.value = rot13(text);
+      document.textform.output.value = rot5(text);
       break;
     case '1':
+      document.textform.output.value = rot13(text);
+      break;
+    case '2':
+        text = rot13(text);
+        document.textform.output.value = rot5(text);
+        break;
+    case '3':
       if (key == "") {
         key = "vigenere";
         document.keyform.key.value = key;
@@ -15,6 +22,6 @@ function submit(val1, val2, text, key){
         document.textform.output.value = vigenere(true,key,text);
       }
       break;
-    default:
+    default: console.log("Keine Verschlüsselung/Entschlüsselung vorgenommen.")
   }
 }
